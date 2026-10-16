@@ -411,28 +411,33 @@ h1, h2, h3, p { margin: 0; }
   }
 }
 
-/* Hero CTA: soft pulse ring + light sweep to draw the eye */
-.hero__cta { position: relative; overflow: hidden; isolation: isolate; animation: ctaPulse 2.2s ease-out infinite; }
+/* Hero CTA: gentle "breathing" + light sweep to draw the eye.
+   Only transform is animated, so the browser never re-lays out the page. */
+.hero__cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: ctaBreath 2.4s ease-in-out infinite;
+  will-change: transform;
+}
 .hero__cta::after {
   content: "";
   position: absolute;
-  inset: 0 auto 0 -60%;
-  width: 45%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .0) 20%, rgba(255, 210, 220, .75) 50%, transparent 80%);
-  transform: skewX(-20deg);
-  animation: ctaShine 3.2s ease-in-out infinite;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 205, 218, .8) 50%, transparent 70%);
+  transform: translateX(-120%);
   pointer-events: none;
   z-index: -1;
+  animation: ctaShine 3.2s ease-in-out infinite;
 }
-.hero__cta:hover { transform: translateY(-2px) scale(1.03); }
-@keyframes ctaPulse {
-  0% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 0 rgba(255, 255, 255, .7); }
-  70% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 16px rgba(255, 255, 255, 0); }
-  100% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 0 rgba(255, 255, 255, 0); }
+.hero__cta:hover { animation-play-state: paused; transform: translateY(-2px) scale(1.04); }
+@keyframes ctaBreath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 @keyframes ctaShine {
-  0%, 55% { left: -60%; }
-  100% { left: 130%; }
+  0%, 55% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero__cta, .hero__cta::after { animation: none; }
