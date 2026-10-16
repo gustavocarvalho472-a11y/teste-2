@@ -356,7 +356,17 @@ h1, h2, h3, p { margin: 0; }
     display: flex;
     align-items: center;
   }
-  .hero__media { position: absolute; inset: 0; aspect-ratio: auto; }
+  /* Photo sits on the right; its left edge fades into a gradient sampled from the photo's backdrop */
+  .hero__card {
+    background: linear-gradient(180deg, #B00233 0%, #D81950 32%, #EC4778 50%, #FA7FA9 72%, #F96D9A 100%);
+  }
+  .hero__media {
+    position: absolute;
+    inset: 0 0 0 36%;
+    aspect-ratio: auto;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 15%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 15%);
+  }
   .hero__shade {
     display: block;
     position: absolute;
