@@ -87,8 +87,9 @@
     btn.className = 'video-card__sound';
     var setLabel = function () {
       btn.classList.toggle('is-on', !v.muted);
-      btn.setAttribute('aria-label', v.muted ? 'Ativar som do ' + label : 'Desativar som do ' + label);
-      btn.textContent = v.muted ? 'Toque para ouvir' : 'Som ligado';
+      btn.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
+      btn.innerHTML = (v.muted ? 'Toque para ouvir' : 'Som ligado') +
+        '<span class="visually-hidden"> — ' + label + '</span>';
     };
     var toggle = function () {
       if (!v.src) v.src = v.dataset.src;

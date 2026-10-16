@@ -10,20 +10,22 @@
   <meta property="og:description" content="1º Ativador metabólico que transforma gordura em energia.">
   <meta property="og:image" content="assets/lp/hero-banner.jpg">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/logos/vora-vermelho.png">
+  <link rel="icon" href="assets/logos/vora-vermelho.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300;125,400&family=Nunito:wght@500;600;700;800;900&family=Space+Mono&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/lp/hero-banner.jpg">
-  <link rel="preload" as="font" type="font/otf" href="fonts/Resolve-BoldExt.otf" crossorigin>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="assets/lp/hero-banner.webp" fetchpriority="high">
+  <!-- Google Fonts sem bloquear a primeira pintura -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300;125,400&family=Nunito:wght@500;600;700;800;900&family=Space+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300;125,400&family=Nunito:wght@500;600;700;800;900&family=Space+Mono&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,300;125,400&family=Nunito:wght@500;600;700;800;900&family=Space+Mono&display=swap"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=20261016">
 </head>
 <body>
 
 <!-- 00. Header -->
 <header class="header">
   <div class="header__inner">
-    <a href="#" class="logo logo--header" aria-label="Vora — início"><img src="assets/logos/vora-vermelho.png" alt=""></a>
+    <a href="#" class="logo logo--header" aria-label="Vora — início"><img src="assets/logos/vora-vermelho.webp" alt="" width="420" height="422"></a>
     <nav class="header__nav" aria-label="Seções">
       <a href="#ativos">Fórmula</a>
       <a href="#depoimentos">Resultados</a>
@@ -40,7 +42,7 @@
   <div class="hero__card">
     <div class="hero__media">
       <div class="hero__slide is-active" style="--pos:40% top;--pos-m:42% top">
-        <img src="assets/lp/hero-banner.jpg" width="1672" height="941" alt="Mulher sorrindo segurando o pote de Vora Termocreatina" fetchpriority="high">
+        <img src="assets/lp/hero-banner.webp" width="1672" height="941" alt="Mulher sorrindo segurando o pote de Vora Termocreatina" fetchpriority="high">
       </div>
     </div>
     <div class="hero__shade"></div>
@@ -72,21 +74,21 @@
 
 <!-- 02. Identificação -->
 <section class="ident" aria-labelledby="ident-title">
-  <img class="float float--front" src="assets/product/lata-inclinada-sm.png" alt="" aria-hidden="true" loading="lazy" style="--r:-18deg;--d:6s;width:clamp(190px, 19vw, 280px);left:-30px;bottom:24px">
-  <img class="float float--front" src="assets/product/lata-flutuando-sm.png" alt="" aria-hidden="true" loading="lazy" style="--r:16deg;--d:7s;width:clamp(200px, 20vw, 300px);right:-40px;bottom:18px">
+  <img class="float float--front" src="assets/product/lata-inclinada-sm.webp" alt="" aria-hidden="true" loading="lazy" style="--r:-18deg;--d:6s;width:clamp(190px, 19vw, 280px);left:-30px;bottom:24px" width="640" height="611">
+  <img class="float float--front" src="assets/product/lata-flutuando-sm.webp" alt="" aria-hidden="true" loading="lazy" style="--r:16deg;--d:7s;width:clamp(200px, 20vw, 300px);right:-40px;bottom:18px" width="640" height="499">
   <div class="ident__card">
     <h2 class="h2" id="ident-title">Se você se identifica com alguma dessas imagens abaixo:</h2>
     <div class="ident__grid">
       <div class="ident__item">
-        <div class="ident__photo"><img src="assets/lp/dor-cansada.jpg" alt="Mulher com cansaço extremo" loading="lazy"></div>
+        <div class="ident__photo"><img src="assets/lp/dor-cansada.webp" alt="Mulher com cansaço extremo" loading="lazy" width="640" height="857"></div>
         <span class="pill ident__tag">Cansaço extremo</span>
       </div>
       <div class="ident__item">
-        <div class="ident__photo"><img src="assets/lp/dor-inchada.jpg" alt="Mulher com a barriga inchada" loading="lazy"></div>
+        <div class="ident__photo"><img src="assets/lp/dor-inchada.webp" alt="Mulher com a barriga inchada" loading="lazy" width="640" height="857"></div>
         <span class="pill ident__tag">Barriga inchada</span>
       </div>
       <div class="ident__item">
-        <div class="ident__photo"><img src="assets/lp/dor-treino.jpg" alt="Mulher que não ganha massa magra no treino" loading="lazy"></div>
+        <div class="ident__photo"><img src="assets/lp/dor-treino.webp" alt="Mulher que não ganha massa magra no treino" loading="lazy" width="640" height="857"></div>
         <span class="pill ident__tag">Não ganha massa magra</span>
       </div>
     </div>
@@ -101,14 +103,14 @@
   <h2 class="h2" id="fever-title">O <span class="accent">VORA</span> virou febre em todo o Brasil!</h2>
   <div class="strip" aria-hidden="true">
     <div class="strip__track" data-marquee>
-      <img src="assets/lp/hero.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-1.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-2.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-3.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-4.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-5.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-6.jpg" alt="" loading="lazy">
-      <img src="assets/lp/cliente-7.jpg" alt="" loading="lazy">
+      <img src="assets/lp/hero.webp" alt="" loading="lazy" width="480" height="640">
+      <img src="assets/lp/cliente-1.webp" alt="" loading="lazy" width="480" height="639">
+      <img src="assets/lp/cliente-2.webp" alt="" loading="lazy" width="480" height="853">
+      <img src="assets/lp/cliente-3.webp" alt="" loading="lazy" width="480" height="640">
+      <img src="assets/lp/cliente-4.webp" alt="" loading="lazy" width="480" height="640">
+      <img src="assets/lp/cliente-5.webp" alt="" loading="lazy" width="480" height="853">
+      <img src="assets/lp/cliente-6.webp" alt="" loading="lazy" width="480" height="853">
+      <img src="assets/lp/cliente-7.webp" alt="" loading="lazy" width="480" height="640">
     </div>
   </div>
   <a href="#kit" class="btn btn--red">Quero meu Vora!</a>
@@ -143,13 +145,13 @@
         </article>
       </div>
       <div class="transf__visual">
-        <div class="transf__photo"><img src="assets/lp/transformacao.jpg" width="900" height="1200" alt="Cliente segurando o pote de Vora Termocreatina" loading="lazy"></div>
+        <div class="transf__photo"><img src="assets/lp/transformacao.webp" width="900" height="1200" alt="Cliente segurando o pote de Vora Termocreatina" loading="lazy"></div>
         <svg class="transf__seal" viewBox="0 0 120 120" aria-hidden="true">
           <defs><path id="sealPath" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
           <circle cx="60" cy="60" r="58" class="transf__seal-bg"/>
           <text class="transf__seal-text"><textPath href="#sealPath">Creatina + Carnitina • 30 porções • </textPath></text>
         </svg>
-        <img class="transf__seal-can" src="assets/product/lata-frente-sm.png" alt="" aria-hidden="true" loading="lazy">
+        <img class="transf__seal-can" src="assets/product/lata-frente-sm.webp" alt="" aria-hidden="true" loading="lazy" width="301" height="263">
         <span class="transf__spark transf__spark--a"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0Z"/></svg></span>
         <span class="transf__spark transf__spark--b"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.9 6.6 5.4 11.1 12 12-6.6.9-11.1 5.4-12 12-.9-6.6-5.4-11.1-12-12C6.6 11.1 11.1 6.6 12 0Z"/></svg></span>
       </div>
@@ -186,22 +188,22 @@
     <div class="reset__scroller" data-carousel>
       <div class="reset__row">
         <figure class="ba-card">
-          <img src="assets/lp/antes-depois-1.jpg" width="450" height="800" alt="Cliente Vora: antes e depois, foto 1" loading="lazy">
+          <img src="assets/lp/antes-depois-1.webp" width="450" height="800" alt="Cliente Vora: antes e depois, foto 1" loading="lazy">
           <span class="pill ba-card__label">Antes</span>
           <span class="pill ba-card__label ba-card__label--after">Depois</span>
         </figure>
         <figure class="ba-card">
-          <img src="assets/lp/antes-depois-2.jpg" width="450" height="800" alt="Cliente Vora: antes e depois, foto 2" loading="lazy">
+          <img src="assets/lp/antes-depois-2.webp" width="450" height="800" alt="Cliente Vora: antes e depois, foto 2" loading="lazy">
           <span class="pill ba-card__label">Antes</span>
           <span class="pill ba-card__label ba-card__label--after">Depois</span>
         </figure>
         <figure class="ba-card">
-          <img src="assets/lp/antes-depois-3.jpg" width="913" height="800" alt="Cliente Vora: antes e depois, foto 3" loading="lazy">
+          <img src="assets/lp/antes-depois-3.webp" width="913" height="800" alt="Cliente Vora: antes e depois, foto 3" loading="lazy">
           <span class="pill ba-card__label">Antes</span>
           <span class="pill ba-card__label ba-card__label--after">Depois</span>
         </figure>
         <figure class="ba-card">
-          <img src="assets/lp/antes-depois-4.jpg" width="901" height="800" alt="Cliente Vora: antes e depois, foto 4" loading="lazy">
+          <img src="assets/lp/antes-depois-4.webp" width="901" height="800" alt="Cliente Vora: antes e depois, foto 4" loading="lazy">
           <span class="pill ba-card__label">Antes</span>
           <span class="pill ba-card__label ba-card__label--after">Depois</span>
         </figure>
@@ -231,7 +233,7 @@
         <div class="stat__body"><span class="stat__pct">91%</span><span class="stat__label">Afirmam redução de Inchaço</span></div>
       </div>
     </div>
-    <div class="days__photo"><img src="assets/lp/insta-casa.jpg" alt="Cliente Vora em casa" loading="lazy"></div>
+    <div class="days__photo"><img src="assets/lp/insta-casa.webp" alt="Cliente Vora em casa" loading="lazy" width="900" height="672"></div>
   </div>
 </section>
 
@@ -242,12 +244,12 @@
   <h2 class="h2" id="testi-title">Confira o que nossas clientes tem a dizer!</h2>
   <div class="testi__scroller" data-carousel>
     <div class="testi__row">
-      <!-- Vídeos em assets/videos/ (MP4 540x960 + capa .jpg). Para trocar, substitua os arquivos ou edite data-src/data-poster. -->
-      <div class="video-card" data-src="assets/videos/depoimento-1.mp4" data-poster="assets/videos/depoimento-1.jpg">Depoimento 1</div>
-      <div class="video-card" data-src="assets/videos/depoimento-2.mp4" data-poster="assets/videos/depoimento-2.jpg">Depoimento 2</div>
-      <div class="video-card" data-src="assets/videos/depoimento-3.mp4" data-poster="assets/videos/depoimento-3.jpg">Depoimento 3</div>
-      <div class="video-card" data-src="assets/videos/depoimento-4.mp4" data-poster="assets/videos/depoimento-4.jpg">Depoimento 4</div>
-      <div class="video-card" data-src="assets/videos/depoimento-5.mp4" data-poster="assets/videos/depoimento-5.jpg">Depoimento 5</div>
+      <!-- Vídeos em assets/videos/ (MP4 540x960 + capa .webp). Para trocar, substitua os arquivos ou edite data-src/data-poster. -->
+      <div class="video-card" data-src="assets/videos/depoimento-1.mp4" data-poster="assets/videos/depoimento-1.webp">Depoimento 1</div>
+      <div class="video-card" data-src="assets/videos/depoimento-2.mp4" data-poster="assets/videos/depoimento-2.webp">Depoimento 2</div>
+      <div class="video-card" data-src="assets/videos/depoimento-3.mp4" data-poster="assets/videos/depoimento-3.webp">Depoimento 3</div>
+      <div class="video-card" data-src="assets/videos/depoimento-4.mp4" data-poster="assets/videos/depoimento-4.webp">Depoimento 4</div>
+      <div class="video-card" data-src="assets/videos/depoimento-5.mp4" data-poster="assets/videos/depoimento-5.webp">Depoimento 5</div>
     </div>
   </div>
   <div class="carousel-dots" aria-label="Navegar pelos depoimentos" hidden></div>
@@ -261,21 +263,21 @@
     <h2 class="h2 h2--lg" id="ativos-title">Tecnologia de Ativos <span class="accent">3 em 1</span></h2>
     <div class="ativos__grid">
       <article class="ativo">
-        <div class="ativo__photo"><img src="assets/lp/ativo-metabolismo.jpg" alt="" loading="lazy"></div>
+        <div class="ativo__photo"><img src="assets/lp/ativo-metabolismo.webp" alt="" loading="lazy" width="760" height="567"></div>
         <h3 class="pill ativo__title">Metabolismo</h3>
         <ul class="ativo__items" role="list" style="list-style:none;margin:0">
           <li class="pill ativo__chip">L-carnitina</li><li class="pill ativo__chip">Dihidrocapsiato</li><li class="pill ativo__chip">Cromo</li>
         </ul>
       </article>
       <article class="ativo">
-        <div class="ativo__photo"><img src="assets/lp/ativo-foco.jpg" alt="" loading="lazy"></div>
+        <div class="ativo__photo"><img src="assets/lp/ativo-foco.webp" alt="" loading="lazy" width="760" height="567"></div>
         <h3 class="pill ativo__title">Energia limpa e foco</h3>
         <ul class="ativo__items" role="list" style="list-style:none;margin:0">
           <li class="pill ativo__chip">Cafeína</li><li class="pill ativo__chip">L-teanina</li><li class="pill ativo__chip">Colina</li>
         </ul>
       </article>
       <article class="ativo">
-        <div class="ativo__photo"><img src="assets/lp/ativo-performance.jpg" alt="" loading="lazy"></div>
+        <div class="ativo__photo"><img src="assets/lp/ativo-performance.webp" alt="" loading="lazy" width="760" height="567"></div>
         <h3 class="pill ativo__title">Performance no treino</h3>
         <ul class="ativo__items" role="list" style="list-style:none;margin:0">
           <li class="pill ativo__chip">Taurina</li><li class="pill ativo__chip">Valina</li><li class="pill ativo__chip">Creatina 3 g</li>
@@ -292,16 +294,16 @@
       <h2 class="dif__title" id="dif-title">Qual é o Diferencial da VORA?</h2>
       <p class="dif__body">A creatina comum entrega um único ativo. A Termocreatina é um ativador metabólico completo: cada dose combina 3 g de creatina com mais 8 ativos que trabalham juntos — L-carnitina, dihidrocapsiato e cromo para o metabolismo; cafeína com L-teanina e colina para energia limpa e foco, sem ansiedade; taurina e valina para a performance no treino. Ou seja: você não toma só creatina, toma um sistema pensado para o corpo voltar a responder — no sabor morango com hibisco.</p>
     </div>
-    <div class="dif__photo"><img src="assets/lp/diferencial.jpg" alt="Mulher com o pote de Vora Termocreatina" loading="lazy"></div>
-    <img class="float" src="assets/product/lata-inclinada-sm.png" alt="" aria-hidden="true" loading="lazy" style="--r:-12deg;--d:6.5s;width:220px;left:-110px;bottom:-80px">
+    <div class="dif__photo"><img src="assets/lp/diferencial.webp" alt="Mulher com o pote de Vora Termocreatina" loading="lazy" width="1000" height="746"></div>
+    <img class="float" src="assets/product/lata-inclinada-sm.webp" alt="" aria-hidden="true" loading="lazy" style="--r:-12deg;--d:6.5s;width:220px;left:-110px;bottom:-80px" width="640" height="611">
   </div>
 </section>
 
 <!-- 09. Kit -->
 <div class="curve curve--in" style="--curve-color:var(--pink-light)"><div></div></div>
 <section class="kit" id="kit" aria-labelledby="kit-title">
-  <img class="float" src="assets/product/lata-flutuando-sm.png" alt="" aria-hidden="true" loading="lazy" style="--r:-20deg;--d:7s;width:220px;left:-60px;top:30px;opacity:.9">
-  <img class="float" src="assets/product/lata-inclinada-sm.png" alt="" aria-hidden="true" loading="lazy" style="--r:18deg;--d:6s;width:200px;right:-50px;bottom:40px;opacity:.9">
+  <img class="float" src="assets/product/lata-flutuando-sm.webp" alt="" aria-hidden="true" loading="lazy" style="--r:-20deg;--d:7s;width:220px;left:-60px;top:30px;opacity:.9" width="640" height="499">
+  <img class="float" src="assets/product/lata-inclinada-sm.webp" alt="" aria-hidden="true" loading="lazy" style="--r:18deg;--d:6s;width:200px;right:-50px;bottom:40px;opacity:.9" width="640" height="611">
   <div class="kit__inner">
     <div class="section-head kit__head">
       <h2 class="h2 h2--lg" id="kit-title">Adquira agora seu <span class="accent">Kit Termocreatina</span></h2>
@@ -313,7 +315,7 @@
         <div class="kit-card__tags"><span class="pill kit-card__tag">Garanta 30 doses</span></div>
         <span class="kit-card__name">Kit 1 mês</span>
         <span class="kit-card__units">1 pote · 30 doses</span>
-        <div class="kit-card__img"><img src="assets/product/lata-frente-sm.png" alt="1 pote de Vora Termocreatina" loading="lazy"></div>
+        <div class="kit-card__img"><img src="assets/product/lata-frente-sm.webp" alt="1 pote de Vora Termocreatina" loading="lazy" width="301" height="263"></div>
         <span class="kit-card__from kit-card__from--empty" aria-hidden="true">&nbsp;</span>
         <span class="kit-card__price"><strong>R$ 169,90</strong> à vista</span>
         <span class="kit-card__inst">ou 12x de R$ 19,64 com juros</span>
@@ -325,7 +327,7 @@
         <div class="kit-card__tags"><span class="pill kit-card__tag">Mais vendido</span><span class="pill kit-card__tag kit-card__tag--off">Economize 15%</span></div>
         <span class="kit-card__name">Kit 2 meses</span>
         <span class="kit-card__units">2 potes · 60 doses</span>
-        <div class="kit-card__img"><img src="assets/product/latas-dupla-sm.png" alt="2 potes de Vora Termocreatina" loading="lazy"></div>
+        <div class="kit-card__img"><img src="assets/product/latas-dupla-sm.webp" alt="2 potes de Vora Termocreatina" loading="lazy" width="575" height="400"></div>
         <span class="kit-card__from">de <s>R$ 339,80</s> por</span>
         <span class="kit-card__price"><strong>R$ 289,90</strong> à vista</span>
         <span class="kit-card__inst">ou em até 12x no cartão</span>
@@ -337,7 +339,7 @@
         <div class="kit-card__tags"><span class="pill kit-card__tag">Melhor custo por dose</span><span class="pill kit-card__tag kit-card__tag--off">Economize 22%</span></div>
         <span class="kit-card__name">Kit 3 meses</span>
         <span class="kit-card__units">3 potes · 90 doses</span>
-        <div class="kit-card__img"><img src="assets/product/latas-trio-sm.png" alt="3 potes de Vora Termocreatina" loading="lazy"></div>
+        <div class="kit-card__img"><img src="assets/product/latas-trio-sm.webp" alt="3 potes de Vora Termocreatina" loading="lazy" width="606" height="277"></div>
         <span class="kit-card__from">de <s>R$ 509,70</s> por</span>
         <span class="kit-card__price"><strong>R$ 397,90</strong> à vista</span>
         <span class="kit-card__inst">ou em até 12x no cartão</span>
@@ -356,9 +358,9 @@
     <h2 class="h2" id="insta-title">Siga o nosso Instagram oficial!</h2>
     <a href="#" class="pill insta__handle" data-link="instagram" target="_blank" rel="noopener">@vora</a>
     <div class="insta__grid">
-      <div><img src="assets/lp/insta-selfie.jpg" alt="Cliente Vora tirando selfie" loading="lazy"></div>
-      <div><img src="assets/lp/insta-rua.jpg" alt="Cliente Vora na rua" loading="lazy"></div>
-      <div><img src="assets/lp/ativo-performance.jpg" alt="Cliente Vora treinando" loading="lazy"></div>
+      <div><img src="assets/lp/insta-selfie.webp" alt="Cliente Vora tirando selfie" loading="lazy" width="600" height="448"></div>
+      <div><img src="assets/lp/insta-rua.webp" alt="Cliente Vora na rua" loading="lazy" width="600" height="448"></div>
+      <div><img src="assets/lp/ativo-performance.webp" alt="Cliente Vora treinando" loading="lazy" width="760" height="567"></div>
     </div>
   </div>
 </section>
@@ -386,7 +388,7 @@
 <!-- 12. Footer -->
 <footer class="footer">
   <div class="footer__top">
-    <span class="logo logo--footer" role="img" aria-label="Vora Nutrition"><img src="assets/logos/nutrition-23.png" alt="" loading="lazy"></span>
+    <span class="logo logo--footer" role="img" aria-label="Vora Nutrition"><img src="assets/logos/nutrition-23.webp" alt="" loading="lazy" width="560" height="562"></span>
     <a href="#kit" class="btn footer__buy">Comprar agora mesmo <span class="footer__buy-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></span></a>
   </div>
 
@@ -431,7 +433,7 @@
   <div class="footer__copy">Vora Nutrition © 2026. Todos os direitos reservados.</div>
 </footer>
 
-<script src="js/config.js"></script>
-<script src="js/main.js"></script>
+<script src="js/config.js?v=20261016" defer></script>
+<script src="js/main.js?v=20261016" defer></script>
 </body>
 </html>
