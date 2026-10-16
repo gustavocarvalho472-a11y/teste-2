@@ -8,9 +8,9 @@ window.VORA_CONFIG = {
 
   // Link do checkout de cada kit (vazio = botão só seleciona o kit)
   kits: [
-    { checkout: '' },
-    { checkout: '' },
-    { checkout: '' }
+    { checkout: 'https://seguro.voranutrition.com/dYLv2c4eha' },          // Kit 1 mês (1 unidade)
+    { checkout: 'https://seguro.voranutrition.com/bC7U9XpAsL/3Steps' },   // Kit 2 meses (2 unidades)
+    { checkout: 'https://seguro.voranutrition.com/nAbXPTXFGl/3Steps' }    // Kit 3 meses (3 unidades)
   ],
 
   // Somente dígitos, com DDI

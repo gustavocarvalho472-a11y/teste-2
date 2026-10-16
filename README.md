@@ -29,5 +29,5 @@ assets/           fotos, renders do pote e logos
 
 ## Pendências de conteúdo
 
-Links de checkout dos kits ainda estão vazios (preencher em `js/config.js`).
+Checkouts configurados em `js/config.js` (1, 2 e 3 unidades).
 Fotos `cliente-*` são de clientes reais — confirmar autorização de uso.

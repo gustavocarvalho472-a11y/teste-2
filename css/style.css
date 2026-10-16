@@ -356,16 +356,20 @@ h1, h2, h3, p { margin: 0; }
     display: flex;
     align-items: center;
   }
-  /* Photo sits on the right; its left edge fades into a gradient sampled from the photo's backdrop */
+  /* Photo sits on the right at full height (never crops the head); its left edge
+     fades into a gradient sampled from the photo's own backdrop */
   .hero__card {
-    background: linear-gradient(180deg, #B00233 0%, #D81950 32%, #EC4778 50%, #FA7FA9 72%, #F96D9A 100%);
+    --hh: clamp(600px, 44vw, 760px);
+    height: var(--hh);
+    background: linear-gradient(180deg, #920127 0%, #C7083B 32%, #E93B68 50%, #FB85AA 70%, #F981A7 100%);
   }
   .hero__media {
     position: absolute;
-    inset: 0 0 0 36%;
+    inset: 0 0 0 auto;
+    width: min(58%, calc(var(--hh) * 1.777));
     aspect-ratio: auto;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 15%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 15%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 10%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 10%);
   }
   .hero__shade {
     display: block;
@@ -407,6 +411,33 @@ h1, h2, h3, p { margin: 0; }
   }
 }
 
+/* Hero CTA: soft pulse ring + light sweep to draw the eye */
+.hero__cta { position: relative; overflow: hidden; isolation: isolate; animation: ctaPulse 2.2s ease-out infinite; }
+.hero__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -60%;
+  width: 45%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .0) 20%, rgba(255, 210, 220, .75) 50%, transparent 80%);
+  transform: skewX(-20deg);
+  animation: ctaShine 3.2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+.hero__cta:hover { transform: translateY(-2px) scale(1.03); }
+@keyframes ctaPulse {
+  0% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 0 rgba(255, 255, 255, .7); }
+  70% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 16px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 6px 0 var(--red-shadow), 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+@keyframes ctaShine {
+  0%, 55% { left: -60%; }
+  100% { left: 130%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__cta, .hero__cta::after { animation: none; }
+}
+
 /* Mobile first fold: full-screen photo of the model, copy overlaid at the bottom.
    Header + hero + black marquee fill exactly one screen. */
 .hero__note { display: none; }
@@ -421,7 +452,8 @@ h1, h2, h3, p { margin: 0; }
     justify-content: flex-end;
     background: #9E0A2C;
   }
-  .hero__media { position: absolute; inset: 0; aspect-ratio: auto; }
+  /* Photo band at the top, wide enough to keep the model and the tub in frame */
+  .hero__media { position: absolute; inset: 0 0 auto 0; height: min(124vw, 74%); aspect-ratio: auto; }
   .hero__slide img { object-position: var(--pos-m, 60% center); }
   .hero__shade {
     display: block;
