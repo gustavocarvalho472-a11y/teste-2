@@ -14,6 +14,18 @@
     }
   });
 
+  /* ---------- Photo strip: start moving only when it scrolls into view ---------- */
+  var strip = document.querySelector('.strip');
+  if (strip && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-strip');
+    var sio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { strip.classList.add('is-visible'); sio.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    sio.observe(strip);
+  }
+
   /* ---------- Kit selection ---------- */
   var cards = document.querySelectorAll('.kit-card');
   var select = function (i, focus) {
