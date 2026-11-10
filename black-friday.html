@@ -382,7 +382,7 @@
       <p class="kit__sub">Com desconto especial e Frete Grátis para todo o Brasil!</p>
     </div>
     <div class="kit__grid" role="radiogroup" aria-label="Escolha seu kit">
-      <!-- Links de checkout vêm de js/config.js -->
+      <!-- Links de checkout vêm do VORA_CONFIG no fim desta página -->
       <div class="kit-card" data-kit="0" role="radio" aria-checked="false" tabindex="-1">
         <div class="kit-card__tags"><span class="pill kit-card__tag kit-card__tag--bf">Black Friday</span><span class="pill kit-card__tag kit-card__tag--pct">10% OFF</span></div>
         <div class="kit-card__tags"><span class="pill kit-card__tag">Garanta 30 doses</span></div>
@@ -394,7 +394,7 @@
         <span class="pill kit-card__save">Você economiza R$ 16,99</span>
         <span class="kit-card__inst">ou 12x de R$ 17,88 no cartão</span>
         <span class="pill kit-card__dose">R$ 5,10 por dose</span>
-        <a href="https://seguro.voranutrition.com/dYLv2c4eha" class="btn btn--red" data-field="checkout">Quero 1 mês de start</a>
+        <a href="https://seguro.voranutrition.com/JCcRm0X9Bz" class="btn btn--red" data-field="checkout">Quero 1 mês de start</a>
         <span class="kit-card__ship-bf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3 3.2v3.3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Frete grátis</span>
       </div>
       <div class="kit-card is-selected" data-kit="1" role="radio" aria-checked="true" tabindex="0">
@@ -408,7 +408,7 @@
         <span class="pill kit-card__save">Você economiza R$ 64,39</span>
         <span class="kit-card__inst">ou 12x de R$ 28,48 no cartão</span>
         <span class="pill kit-card__dose">R$ 4,59 por dose</span>
-        <a href="https://seguro.voranutrition.com/bC7U9XpAsL/3Steps" class="btn btn--red" data-field="checkout">Quero 2 meses</a>
+        <a href="https://seguro.voranutrition.com/dpnh0SsUas" class="btn btn--red" data-field="checkout">Quero 2 meses</a>
         <span class="kit-card__ship-bf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3 3.2v3.3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Frete grátis</span>
       </div>
       <div class="kit-card" data-kit="2" role="radio" aria-checked="false" tabindex="-1">
@@ -422,7 +422,7 @@
         <span class="pill kit-card__save">Você economiza R$ 131,69</span>
         <span class="kit-card__inst">ou 12x de R$ 39,09 no cartão</span>
         <span class="pill kit-card__dose">R$ 4,20 por dose</span>
-        <a href="https://seguro.voranutrition.com/nAbXPTXFGl/3Steps" class="btn btn--red" data-field="checkout">Quero 3 meses</a>
+        <a href="https://seguro.voranutrition.com/0NUechZW0u" class="btn btn--red" data-field="checkout">Quero 3 meses</a>
         <span class="kit-card__ship-bf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3 3.2v3.3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Frete grátis</span>
       </div>
     </div>
@@ -511,7 +511,32 @@
   <div class="footer__copy">Vora Nutrition © 2026. Todos os direitos reservados.</div>
 </footer>
 
-<script src="js/config.js?v=20261017b" defer></script>
+<script>
+/*
+ * Configuração da LP Black Friday — links de checkout (padrão) e contatos.
+ * Fica dentro deste HTML para não depender do js/config.js da LP original.
+ * Preços e textos dos kits ficam no index.html (seção 09. Kit).
+ */
+window.VORA_CONFIG = {
+  // Kit padrão selecionado (0 = 1 mês, 1 = 2 meses, 2 = 3 meses)
+  defaultKit: 1,
+
+  // Link do checkout de cada kit (vazio = botão só seleciona o kit)
+  kits: [
+    { checkout: 'https://seguro.voranutrition.com/JCcRm0X9Bz' },          // Kit 1 mês (1 unidade)
+    { checkout: 'https://seguro.voranutrition.com/dpnh0SsUas' },   // Kit 2 meses (2 unidades)
+    { checkout: 'https://seguro.voranutrition.com/0NUechZW0u' }    // Kit 3 meses (3 unidades)
+  ],
+
+  // Somente dígitos, com DDI
+  whatsappNumber: '5548999008733',
+  whatsappMessage: 'Olá! Tenho uma dúvida sobre o Vora Termocreatina.',
+
+  phone: '(48) 99900-8733',
+  email: 'vora.termocreatina@gmail.com',
+  instagramHandle: 'vora.nutrition'
+};
+</script>
 <script src="js/main.js?v=20261017b" defer></script>
 </body>
 </html>
